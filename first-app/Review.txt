@@ -1,0 +1,8 @@
+1. Node.js is a javascript runtime.
+2. Node.js consists of the V8 Google Engine and adds on top of it some functionality
+   such as file system, operating system and HTTP modules.
+3. We can use Node.js to run code on the server. We can use Node to build servers,
+   listen to requests, handle requests and return responses to users.
+4. Node helps us safeguard databses, validation and business logic.
+5. We can use 'node' command in the terminal to activate a REPL environment.
+6. REPL stands for read, evaluate, print and loop and is a sort of playground for Node development.
