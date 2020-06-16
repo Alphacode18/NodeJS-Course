@@ -6,6 +6,8 @@ const greet = function(name) {
 
 //Arrow Function. No need for return statement.
 
+//Arrow Functions are great for the 'this' keyword.
+
 const hello = name => `Hello, ${name}`;
 
 //Function Calls
