@@ -10,7 +10,9 @@ const greet = function(name) {
 
 const hello = name => `Hello, ${name}`;
 
+const add = (a, b) => a + b;
 //Function Calls
 
 greet('Shreyas');
 console.log(hello('Deepti'));
+console.log(add(3,5));
