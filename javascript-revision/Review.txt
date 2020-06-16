@@ -1,0 +1,1 @@
+JavaScript is a weakly typed, object-oriented and versatile language.
