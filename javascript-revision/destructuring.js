@@ -21,5 +21,9 @@ const printNameDestructuring = ({firstName}) => {
 const {gradePointAverage} = person;
 console.log(gradePointAverage);
 
+//Destructuring Arrays
+const [class1, class2, class3] = person.coursesTakes;
+console.log(`${class1}, ${class2}, ${class3}.`);
+
 console.log(printName(person));
 console.log(printNameDestructuring(person));
