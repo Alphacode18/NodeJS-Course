@@ -18,10 +18,14 @@ const printNameDestructuring = ({firstName}) => {
     return firstName;
 };
 
+//Destructuring Objects.
+//We require the same name as it is a key value player.
+
 const {gradePointAverage} = person;
 console.log(gradePointAverage);
 
 //Destructuring Arrays
+//Any name can be chosen for variables as arrays do not have any names, only positional importance.
 const [class1, class2, class3] = person.coursesTakes;
 console.log(`${class1}, ${class2}, ${class3}.`);
 
