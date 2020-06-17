@@ -18,5 +18,8 @@ const printNameDestructuring = ({firstName}) => {
     return firstName;
 };
 
+const {gradePointAverage} = person;
+console.log(gradePointAverage);
+
 console.log(printName(person));
 console.log(printNameDestructuring(person));
