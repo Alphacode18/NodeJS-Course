@@ -11,3 +11,11 @@ const person = {
 
 const newPerson = {...person};
 console.log(newPerson);
+
+//Rest on the other hand is like kwargs in python. It takes in multiple arguements and uses them.
+
+const createArray = (...args) => {
+    return args;
+}
+
+console.log(createArray('Shreyas', 'is', 'a', 'mad', 'lad'));
