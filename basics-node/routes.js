@@ -37,3 +37,12 @@ const requestHandler = (request, response) => {
 };
 
 module.exports = requestHandler; //This makes it a cached file. Thus wherever you are importing it, you cannot make changes to the actual file.
+
+/*
+module.exports = {
+    handler: requestHandler,
+    someText: 'Some hardcoded text',
+};
+
+We can export multiple things as an object as well
+*/
