@@ -36,4 +36,4 @@ const requestHandler = (request, response) => {
     response.end();
 };
 
-module.exports = requestHandler;
+module.exports = requestHandler; //This makes it a cached file. Thus wherever you are importing it, you cannot make changes to the actual file.
