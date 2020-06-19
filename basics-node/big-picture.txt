@@ -1,0 +1,20 @@
+Node.js
+-------
+
+Node.js uses only one single JavaScript thread. It bases on the event loop. The event loop is responsible for the event call backs.
+Thus, the event loop is available and takes care of the callbacks required for a particular event. So event loop handles call backs.
+
+The heavy hitting tasks like accessing the file system or working with the OS are sent to the Worker Pool. The worker pool is detatched from the
+JS code. It can assign multiple threads and works particularly with the OS. The connection with the event loop is that once the worker is done
+with the work, it nudges the event loop for the call back. Thus, it is ultimately handled by the event loop.
+
+Node keeps the event loop running. The order goes as follows:
+1. The event loop first checks for timers (setTimeout, setInterval).
+2. It then checks pending call backs that were deffered. (Generally blocking functions) //If these open callbacks take time, it defers it, pushes it to 
+the next iteration and continue.
+3. It Polls, check for new I/O and execute their call backs. If those are also long, it will defer the execuation and register it as a pending callback.
+   If there is a timer to execute, it'll jump to step 1.
+4. In check phase, it checks for setImmediate() callbacks. But only after current open call backs.
+5. Checks for close event callbacks and executes them.
+6. Might process.exit() only if there are no registered open event listeners. //Hence always something is there. You'd generally have to do this manually.
+
