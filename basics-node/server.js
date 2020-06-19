@@ -11,6 +11,15 @@ const server = http.createServer((request, response) => {
         return response.end();
     }
     if (url === '/message' && method === 'POST') {
+        const body = [];
+        request.on('data', (chunk) => {
+            console.log(chunk);
+            body.push(chunk);
+        });
+        request.on('end', () => {
+            const parsedBody = Buffer.concat(body).toString();
+            console.log(parsedBody);
+        });
         fs.writeFileSync('message.txt', 'Message Logged');
         response.statusCode = 302;
         response.setHeader('Location', '/');
