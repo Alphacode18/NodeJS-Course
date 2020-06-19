@@ -20,10 +20,12 @@ const server = http.createServer((request, response) => {
             const parsedBody = Buffer.concat(body).toString();
             console.log(parsedBody);
             const message = parsedBody.split('=')[1];
-            fs.appendFileSync('message.txt', `Message: ${message}\n`); //Works synchronously, so the execution of code is blocked.
-            response.statusCode = 302;
-            response.setHeader('Location', '/');
-            return response.end();
+            //fs.appendFileSync('message.txt', `Message: ${message}\n`); //Works synchronously, so the execution of code is blocked.
+            fs.writeFile('message.txt', message, err => {
+                response.statusCode = 302;
+                response.setHeader('Location', '/');
+                return response.end();
+            });
         });
     }
     response.setHeader('Content-Type', 'text/html');
