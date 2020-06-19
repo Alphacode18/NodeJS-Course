@@ -1,7 +1,13 @@
 const http = require('http'); //Require used to import modules. It takes in a path or a core module as a arguement. Adds a .js at the end.
 const server = http.createServer((request, response) => {
-    console.log(request.url, request.method, request.headers);
-    //process.exit();
+    const url = request.url;
+    if (url === '/') {
+        response.write('<html>');
+        response.write('<head><title>Enter Message</title></head>');
+        response.write('<body><form action = "/message" method = "POST"><input type="text" name="message"><button type="submit">Submit</button></body>');
+        response.write('</html>');
+        return response.end();
+    }
     response.setHeader('Content-Type', 'text/html');
     response.write('<html>');
     response.write('<head><title>My First Page</title></head>');
