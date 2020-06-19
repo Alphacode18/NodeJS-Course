@@ -36,7 +36,11 @@ const requestHandler = (request, response) => {
     response.end();
 };
 
+//Method A
+
 module.exports = requestHandler; //This makes it a cached file. Thus wherever you are importing it, you cannot make changes to the actual file.
+
+//Method B
 
 /*
 module.exports = {
@@ -45,4 +49,11 @@ module.exports = {
 };
 
 We can export multiple things as an object as well
+*/
+
+//Method C
+
+/*
+exports.handler = requestHandler;
+exports.handler = 'Some hardcoded text';
 */
