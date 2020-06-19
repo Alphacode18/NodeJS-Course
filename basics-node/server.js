@@ -16,11 +16,11 @@ const server = http.createServer((request, response) => {
             console.log(chunk);
             body.push(chunk);
         });
-        request.on('end', () => {
+        return request.on('end', () => {
             const parsedBody = Buffer.concat(body).toString();
             console.log(parsedBody);
             const message = parsedBody.split('=')[1];
-            fs.appendFileSync('message.txt', `Message: ${message}\n`);
+            fs.appendFileSync('message.txt', `Message: ${message}\n`); //Works synchronously, so the execution of code is blocked.
             response.statusCode = 302;
             response.setHeader('Location', '/');
             return response.end();
