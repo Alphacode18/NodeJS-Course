@@ -11,7 +11,7 @@ const server = http.createServer((request, response) => {
         return response.end();
     }
     if (url === '/message' && method === 'POST') {
-        fs.writeFileSync('message.txt', 'Dummy Text');
+        fs.writeFileSync('message.txt', 'Message Logged');
         response.statusCode = 302;
         response.setHeader('Location', '/');
         return response.end();
