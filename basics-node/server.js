@@ -20,7 +20,7 @@ const server = http.createServer((request, response) => {
             const parsedBody = Buffer.concat(body).toString();
             console.log(parsedBody);
             const message = parsedBody.split('=')[1];
-            fs.writeFileSync('message.txt', message);
+            fs.appendFileSync('message.txt', `Message: ${message}\n`);
         });
         response.statusCode = 302;
         response.setHeader('Location', '/');
