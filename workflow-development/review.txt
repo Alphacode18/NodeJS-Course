@@ -24,3 +24,9 @@ While, a fully production based package would be installed as:
 npm install express --save
 
 We can also do a npm install node -g (This installs the package globally).
+
+npm install (Updates all packages)
+
+To save space you can delete node modules to work, but then you can re-run npm install to get all dependencies back.
+
+package-lock.json consists of the current versions installed and working.
