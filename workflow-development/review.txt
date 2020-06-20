@@ -9,7 +9,7 @@ Example: npm start (For this project) //start is a special name
 If the script name is custom, you have to use npm run start-server.
 
 Third party packages are used to add utilities to your project without re-inventing the wheel.
-All such packages live in NPM's cloud. We can use NPM to retrieve those projects.
+All such packages live in NPM cloud. We can use NPM to retrieve those projects.
 ------------------------
 
 Installing Packages Using NPM
@@ -38,3 +38,15 @@ Third Party Modules need to be installed and imported.
 
 In this example, if we used "nodemon server.js" it would not work as the shell looks for the package globally and not locally.
 
+---------------------------
+
+Errors
+------
+
+The types of errors are Syntax Errors, Runtime Errors, and Logical Errors.
+
+Syntax errors are relatively easier to be found. They create the editor to groan.
+Runtime Errors are places where the syntax was right but something fudged up during running that caused an issue. Issue in static semantic.
+Logical Error are well logical in nature. Think smart.
+
+Use the Node.js debugger in VS Code for better debugging.
