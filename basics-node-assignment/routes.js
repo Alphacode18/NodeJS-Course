@@ -8,6 +8,18 @@ const requestHandler = (request, response) => {
         displayUsers(response);
     };
     if (url === '/create-user' && method === 'POST') {
+        const data = [];
+        request.on('data', (chunk)=> {
+            console.log(chunk);
+            data.push(chunk);
+        });
+        return request.on('end', () => {
+            const username = Buffer.concat(data).toString().split("=")[1];
+            console.log(username);
+            response.statusCode = 302;
+            response.setHeader('location', '/');
+            return response.end();
+        });
     };
 };
 
@@ -41,5 +53,15 @@ const displayUsers = response => {
     response.write('</html>');
     return response.end();
 };
+
+/*const parseUsername = (request, dataArray) => {
+    request.on('data', (chunk)=> {
+        console.log(chunk);
+        dataArray.push(chunk);
+    });
+    request.on('end', () => {
+        return Buffer.concat(dataArray).toString().split("=")[1];
+    });
+}*/
 
 module.exports = requestHandler;
