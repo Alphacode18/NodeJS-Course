@@ -30,3 +30,11 @@ npm install (Updates all packages)
 To save space you can delete node modules to work, but then you can re-run npm install to get all dependencies back.
 
 package-lock.json consists of the current versions installed and working.
+
+There are three kinds of spaces: Global Space, Core Modules, and Third Party Modules.
+Global Space think of it as in-built and every JS file has access to it.
+Core Modules are installed but need to be imported.
+Third Party Modules need to be installed and imported.
+
+In this example, if we used "nodemon server.js" it would not work as the shell looks for the package globally and not locally.
+
