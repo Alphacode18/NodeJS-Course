@@ -19,6 +19,8 @@ Using MiddleWare
 
 Express is all about MiddleWare. MiddleWare is functions that a request goes through before coming to a response.
 Allows better abstraction and plug nature.
+Think of it like a funnel that uses the app.get() architecture.
+We pass in a callback function that takes in request, response and next (next is a callback which pushes it onto the next middleware).
 
 Working With Requests And Responses
 -----------------------------------
