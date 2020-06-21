@@ -35,7 +35,7 @@ Routing
 -------
 
 Express gives us a pretty good routing outsource structure.
-app.get() and app.post() match the route exactly while app.use() looks for starting the string
+app.get() and app.post() match the route exactly while app.use() looks for starting the strings
 
 Returning HTML Pages
 --------------------
