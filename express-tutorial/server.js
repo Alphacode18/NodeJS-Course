@@ -34,10 +34,10 @@ app.use('/add-product', (req, res, next) => {
     //Express does the header setting for you.
 });
 
-app.use('/product', (req, res, next) => {
+app.post('/product', (req, res, next) => {
     console.log(req.body); //undefined because even though Express gives us the body, it does not parse it for us.
     res.redirect('/');
-});
+}); // app.get is for get requests, while app.post is for post requests. It has the same syntax as app.use()
 
 app.use('/', (req, res, next) => {
     res.send('<h1>Hello From Express</h1>'); //Express does the header setting for you.
