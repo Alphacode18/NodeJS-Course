@@ -1,0 +1,27 @@
+What is Express.js
+------------------
+
+Writing all the server side logic is complex and time consuming.
+Express allows you to use third party packages to hooked in and helps us focus on our applications.
+We use a framework for this heavy lifting. Framework is full of helper function and tools that help us build things.
+
+Alternatives to Express.js:
+1. Vanilla Node.js
+2. Adonis.js
+3. Koa
+4. Sails.js
+
+Express is by far most popular and most useful. It is highly flexible and minimalist. Gives you core functionality out of the box without making
+the application clunky. 
+
+Using MiddleWare
+----------------
+
+Working With Requests And Responses
+-----------------------------------
+
+Routing
+-------
+
+Returning HTML Pages
+--------------------
