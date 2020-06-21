@@ -25,6 +25,12 @@ We pass in a callback function that takes in request, response and next (next is
 Working With Requests And Responses
 -----------------------------------
 
+app.use() //Works with all HTTP methods.
+app.get() //Works with all GET Requests
+app.post() //Works with all POST request.
+
+get cannot be used for post and similarly.
+
 Routing
 -------
 
