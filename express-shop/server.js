@@ -12,7 +12,7 @@ app.use('/', (req, res, next)=> {
 
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(adminRoutes);
+app.use('/admin', adminRoutes); //first path adds a kind of prefix. Thus, it implicitly adds admin in the path inside adminRoutes.
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
