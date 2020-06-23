@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/users.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header-nav">
+            <ul class="main-header-item-list">
+                <li class="main-header-items"><a href="/">Home</a></li>
+                <li class="main-header-items"><a class="active" href="/users">Users</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/users" method="POST" class="product-form">
+            <div class="form-control">
+                <label for="username" class="form-control">Username:</label>
+                <input type="text" name="username" id="username">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <br>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </main>    
+</body>
+</html>
