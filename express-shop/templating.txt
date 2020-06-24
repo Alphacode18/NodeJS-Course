@@ -9,8 +9,8 @@ Then the template is filled and HTML is sent to the user after generation on the
 Available Engines
 -----------------
 
-1. EJS
-2. Pug (Jade)
-3. Handlebars
+1. EJS: Use Normal HTML and plain JS
+2. Pug (Jade): Use minimal HTML and custom template language
+3. Handlebars: Use normal HTML and custom template language.
 
  
