@@ -3,7 +3,11 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const app = express(); 
+const app = express();
+
+//Express Configuration Set Up For Templating Engine And View Folder Path
+app.set('view engine', 'pug');
+app.set('view', path.join(__dirname, 'views'));
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
