@@ -1,0 +1,16 @@
+Templating Engine
+-----------------
+
+A templating engine uses an HTMLish template which has all your HTML page format with blanks. Think of a story with Fill in The blanks.
+It then goes through the Node/Express content and then replaces place holder and snippets with real HTML content.
+This content is generated on the fly by the server basing on the dynamic content.
+Then the template is filled and HTML is sent to the user after generation on the fly.
+
+Available Engines
+-----------------
+
+1. EJS
+2. Pug (Jade)
+3. Handlebars
+
+ 
