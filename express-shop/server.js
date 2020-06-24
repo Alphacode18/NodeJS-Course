@@ -7,7 +7,7 @@ const app = express();
 
 //Express Configuration Set Up For Templating Engine And View Folder Path
 app.set('view engine', 'pug');
-app.set('view', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
