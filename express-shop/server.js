@@ -7,7 +7,12 @@ const handlebars = require('express-handlebars');
 const app = express();
 
 //Express Configuration Set Up For Templating Engine And View Folder Path
-app.engine('handlebars', handlebars());
+app.engine('handlebars', handlebars({     
+    extname: "handlebars",     
+    //defaultLayout: "main-layout",     
+    //layoutsDir: "views/layout/"   
+}));
+
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -26,7 +31,7 @@ app.use(shopRoutes);
 
 //Way To Pass Data In Templating Engine Does Not Change
 app.use((req, res, next) => {
-    res.status('404').render('404.pug', { pageTitle: 'Page Not Found' });
+    res.status('404').render('404.handlebars', { pageTitle: 'Page Not Found' });
 })
 
 app.listen(3000);
