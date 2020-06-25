@@ -23,7 +23,7 @@ app.use('/admin', adminData.router); //first path adds a kind of prefix. Thus, i
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-    res.status('404').render('404.pug');
+    res.status('404').render('404.pug', { pageTitle: 'Page Not Found' });
 })
 
 app.listen(3000);
