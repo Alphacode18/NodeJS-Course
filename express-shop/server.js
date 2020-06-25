@@ -2,11 +2,13 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const handlebars = require('express-handlebars@3.0');
 
 const app = express();
 
 //Express Configuration Set Up For Templating Engine And View Folder Path
-app.set('view engine', 'pug');
+app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 const adminData = require('./routes/admin');
