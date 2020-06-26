@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
     console.log(adminData.products);
     //res.sendFile(path.join(rootDir,'views', 'shop.html'));//Path must be absolute but if you use '/', that'd be the root directory of the OS.
     //Thus, we use the path core module. Path.join() takes in arguments and takes strings. Path.join() detects OS and constructs path accordingly.
-    res.render('shop.handlebars', { prods: products, pageTitle: 'Shop', path: '/' });//Data is passed in render as a JavaScript Object so we can reference the key in .pug file
+    res.render('shop', { prods: products, pageTitle: 'Shop', path: '/' });//Data is passed in render as a JavaScript Object so we can reference the key in .pug file
 });
 
 module.exports = router;
