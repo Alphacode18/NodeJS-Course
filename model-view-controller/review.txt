@@ -1,0 +1,24 @@
+Model View Controller
+---------------------
+
+Model View Controller is a model for separation of concerns.
+
+Models
+======
+Represent the data in your code.
+Works with your data (saving, fetching ..)
+
+View
+====
+What the user sees.
+Rendering the right content.
+
+Routes & Middleware
+===================
+   |
+   |
+   |
+Controller
+==========
+Connects your models and the views.
+Contains the in-between logic.
