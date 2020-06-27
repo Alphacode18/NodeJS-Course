@@ -9,7 +9,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 app.use('/', (req, res, next)=> {
@@ -19,7 +19,7 @@ app.use('/', (req, res, next)=> {
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminData.router); //first path adds a kind of prefix. Thus, it implicitly adds admin in the path inside adminRoutes.
+app.use('/admin', adminRoutes); //first path adds a kind of prefix. Thus, it implicitly adds admin in the path inside adminRoutes.
 app.use(shopRoutes);
 
 //Way To Pass Data In Templating Engine Does Not Change
