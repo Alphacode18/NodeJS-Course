@@ -11,6 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+const errorController = require('./controllers/error');
 
 app.use('/', (req, res, next)=> {
     next();
@@ -23,8 +24,6 @@ app.use('/admin', adminRoutes); //first path adds a kind of prefix. Thus, it imp
 app.use(shopRoutes);
 
 //Way To Pass Data In Templating Engine Does Not Change
-app.use((req, res, next) => {
-    res.status('404').render('404', { pageTitle: 'Page Not Found' });
-})
+app.use(errorController.get404);
 
 app.listen(3000);
