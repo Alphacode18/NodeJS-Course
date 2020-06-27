@@ -9,4 +9,8 @@ router.get('/', (request, response, next) => {
     });
 });
 
+router.post('/', (request, response, next) => {
+    response.redirect('/users');
+});
+
 module.exports = router;
