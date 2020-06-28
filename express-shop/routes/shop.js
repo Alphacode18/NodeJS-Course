@@ -14,6 +14,8 @@ router.get('/cart', shopController.getCart)
 
 router.get('/checkout', shopController.getCheckout);
 
+router.get('/orders', shopController.getOrders);
+
 module.exports = router;
 //This data in the products file is inherent to the server hence when another request comes in, it'll still hold the data from all the other
 //users. Sometimes this is what we want but it can create vulnerabilities.

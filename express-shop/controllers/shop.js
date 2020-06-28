@@ -34,7 +34,15 @@ const getCheckout = (req, res, next) => {
     })
 };
 
+const getOrders = (req, res, next) => {
+    res.render('shop/orders', {
+        pageTitle: 'Your Orders',
+        path: '/orders',
+    })
+};
+
 exports.getProducts = getProducts;
 exports.getIndex = getIndex
 exports.getCart = getCart;
 exports.getCheckout = getCheckout;
+exports.getOrders = getOrders;
