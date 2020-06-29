@@ -13,9 +13,12 @@ const getProducts = (req, res, next) => {
 const getProduct = (req, res, next) => {
     const prodId = req.params.productId;
     console.log(Product.findById(prodId, product => {
-        console.log(product);
+        res.render('shop/product-detail', {
+            pageTitle: 'Product Detail',
+            path: '/products',
+            product: product,
+        });
     }));
-    res.redirect('/');
 };
 
 const getIndex = (req, res, next) => {
