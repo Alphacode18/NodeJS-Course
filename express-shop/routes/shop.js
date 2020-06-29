@@ -10,6 +10,10 @@ router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
+// : signals to express that we are dealing with dynamic paths. Always order routes in specificity. Thus dynamic routes should be at the end.
+
+router.get('/products/:productId', shopController.getProduct);
+
 router.get('/cart', shopController.getCart)
 
 router.get('/checkout', shopController.getCheckout);
