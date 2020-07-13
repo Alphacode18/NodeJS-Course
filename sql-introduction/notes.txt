@@ -35,3 +35,22 @@ product
 - In the above arguement we see nested documents
 - You can connect documents but that can slow the process of querying down!
 
+Vertical vs Horizontal Scaling
+------------------------------
+
+Horizontal Scaling
+- Buy more servers and split data across servers.
+- Infinite servers
+
+Vertical Scaling
+- Make CPU, Memory, etc stronger.
+- Easier but limited in resources at some point.
+
+SQL
+- SQL uses schemas, relations and data is distributed across multiple servers. Thus horizontal scaling is impossible, while vertical is possible!
+- Limitations for multiple (thousands) read and write per second
+
+NoSQL
+- No Schema, No or very few relations and data is typically merged in few collections.
+- Both Vertical and Horizontal scaling favourable!
+- Great performance for high read and write request!
