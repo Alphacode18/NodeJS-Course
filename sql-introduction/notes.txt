@@ -54,3 +54,5 @@ NoSQL
 - No Schema, No or very few relations and data is typically merged in few collections.
 - Both Vertical and Horizontal scaling favourable!
 - Great performance for high read and write request!
+
+Edit: MySQL setup complete.
