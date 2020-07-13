@@ -17,4 +17,21 @@ SQL
 NoSQL
 -----
 
--
+- NoSQL still has a database but instead of tables, it has collections which can be more or less thought as cables
+- No records (rows) but it consists of documents. Example, {name: 'Manny', age: 28}. Looks a lot like JS objects.
+- NoSQL is schemaless
+- No kind of relations, so we go for duplicate data 
+Example:
+orders
+------
+{id: fe23, user:{id: 234, name: 'Max', age: 24}, product:{id: 543, name: 'MacBook Pro', price: 1800}}
+user
+----
+{id: 234, name: 'Max', age: 24}
+product
+-------
+{id: 543, name: 'MacBook Pro', price: 1800}
+
+- In the above arguement we see nested documents
+- You can connect documents but that can slow the process of querying down!
+
