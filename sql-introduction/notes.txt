@@ -1,0 +1,12 @@
+1. SQL vs NoSQL
+---------------
+
+Goal: Store Data and Make it easily accessible!
+
+- SQL predominantly works with Tables. A shop can have user, product and order table with fields or columns and records or rows.
+- They allow relations. For example, a order table can have relationship between users and products.
+- Strong data schema is a must. Requires a lot of thought during architecture.
+- Schema is basically how data has to look like
+- Relations can be one-to-one, one-to-many and many-to-many
+- SQL stands for Structured Query Language. Queries are key to obtain data. Example, SELECT * FROM users WHERE age > 28. This is a Query
+- In the above example, capital words are SQL verbs and lower letters are parameters.
