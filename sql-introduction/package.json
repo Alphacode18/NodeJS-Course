@@ -9,8 +9,7 @@
     "start-server": "node app.js",
     "add": "git add .",
     "commit": "git commit -m \"SQL Module Continued\"",
-    "push": "git push",
-    "send": "npm run -s add & npm run -s commit & npm run -s push"
+    "push": "git push"
   },
   "author": "Shreyas Kharbanda",
   "license": "ISC",
