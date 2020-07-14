@@ -1,5 +1,6 @@
 const Cart = require('./cart');
 const db = require('../util/database');
+const { VARCHAR } = require('mysql2/lib/constants/types');
 
 module.exports = class Product {
   constructor(id, title, imageUrl, description, price) {
@@ -11,6 +12,8 @@ module.exports = class Product {
   };
 
   save() {
+    return db.execute('INSERT INTO products (title, price, imageUrl, description) VALUES (?, ?, ?, ?)',
+    [this.title, this.price, this.imageUrl, this.description]);
   };
 
   static deleteById(id) {
