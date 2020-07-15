@@ -64,4 +64,14 @@ Sequelize
 - Sequelize is an ORM (Object Relational Mapping Library), which means it does all the heavy lifting behind the scenes.
 - Core includes Models (Tables), Instances (Rows), Utility Functions (Queries) and Mapping (Relational Databasing)
 - Sequelize requires mysql2 package to work!
-- 
+
+
+Associations
+------------
+
+- A shop has products, cart, orders and users.
+- A product can have many carts.
+- A product can be part of multiple orders.
+- A user can have only one cart.
+- A user can have multiple orders.
+- A user can create multiple products.
