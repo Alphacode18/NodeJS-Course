@@ -19,6 +19,17 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => {
+    User.findByPk(1)
+    .then(user => {
+        req.user = user; //Saving sequelize user object in request
+        next();
+    })
+    .catch(err => {
+        console.log(err);
+    });
+});
+
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
@@ -29,7 +40,7 @@ User.hasMany(Product);
 
 sequelize
     .sync() //Method Syncs all the tables
-    .then(result => {
+    .then(() => {
         return User.findByPk(1)
     })
     .then(user => {
@@ -38,7 +49,7 @@ sequelize
         }
         return user;
     })
-    .then(user => {
+    .then(() => {
         app.listen(3000);
     })
     .catch(err => {
