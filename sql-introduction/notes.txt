@@ -75,3 +75,15 @@ Associations
 - A user can have only one cart.
 - A user can have multiple orders.
 - A user can create multiple products.
+
+
+Takeaways
+---------
+
+- Import Sequelize constructor 
+- Construct a sequelize object
+- Works heavily on promises
+- Create model using sequelize.define()
+- Sync models using sequelize.sync()
+- Associations using belongsTo() and hasMany()
+- Magic methods for Associations.
