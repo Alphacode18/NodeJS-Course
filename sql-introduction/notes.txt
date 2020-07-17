@@ -87,3 +87,4 @@ Takeaways
 - Sync models using sequelize.sync()
 - Associations using belongsTo() and hasMany()
 - Magic methods for Associations.
+- To Create Many-To-Many Associations We need an intermediate table to be specified
