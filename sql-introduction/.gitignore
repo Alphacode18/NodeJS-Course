@@ -1,3 +1,4 @@
 node_modules
 database.js
 old-database.js
+.DS_Store
