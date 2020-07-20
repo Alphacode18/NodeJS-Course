@@ -1,0 +1,17 @@
+What is MongoDB
+---------------
+
+- MongoDB is a company and also the name of their most famous product.
+- Mongo is short for Humongous implying and proving that it works best with large data sets.
+
+How it works
+------------
+
+- MongoDB has its own server just like SQL.
+- MongoDB is schemaless. Thus documents don't need to have same structure.
+- You have a database for say shop.
+- For tables, it has collections (Users, Products) and for rows it has documents.
+- MongoDB uses JSON to depict data, but it actually uses BSON (Binary JSON) - transforms to binary behind the scenes.
+- Here, you can have nested (or embedded) JavaScript Objects. (Relations are managed differently)
+- Heavily uses duplicate data where a document in a collection would use full/part of a document in another collection as embedded object.
+- 
