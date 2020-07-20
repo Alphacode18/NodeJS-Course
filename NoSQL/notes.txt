@@ -14,4 +14,7 @@ How it works
 - MongoDB uses JSON to depict data, but it actually uses BSON (Binary JSON) - transforms to binary behind the scenes.
 - Here, you can have nested (or embedded) JavaScript Objects. (Relations are managed differently)
 - Heavily uses duplicate data where a document in a collection would use full/part of a document in another collection as embedded object.
+- This duplicate data relations makes MongoDB very fast.
+- Another ability is references. If there is a lot of duplication, we can use reference ids and easily change the data in one place.
+- Reference slow querying down.
 - 
