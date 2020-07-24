@@ -23,7 +23,7 @@ class User {
     const db = getDb();
     return db
       .collections('users')
-      .find({ id: new mongodb.ObjectID(userId) })
+      .find({ _id: new mongodb.ObjectID(userId) })
       .next()
       .then((user) => {
         return user;
