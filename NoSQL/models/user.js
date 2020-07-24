@@ -1,31 +1,27 @@
 const mongodb = require('mongodb');
-const { getDb } = require('../util/database');
+const getDb = require('../util/database').getDb;
+
+const ObjectId = mongodb.ObjectId;
 
 class User {
   constructor(username, email) {
-    (this.username = username), (this.email = email);
+    this.name = username;
+    this.email = email;
   }
 
   save() {
     const db = getDb();
-    return db
-      .collections('users')
-      .insertOne(this)
-      .then((result) => {
-        console.log('User Added');
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    return db.collection('users').insertOne(this);
   }
 
   static findById(userId) {
     const db = getDb();
     return db
-      .collections('users')
-      .find({ _id: new mongodb.ObjectID(userId) })
+      .collection('users')
+      .find({ _id: new ObjectId(userId) })
       .next()
       .then((user) => {
+        console.log(user);
         return user;
       })
       .catch((err) => {
