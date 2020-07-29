@@ -20,11 +20,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
   User.findById('5baa2528563f16379fc8a610')
-    .then(user => {
+    .then((user) => {
       req.user = new User(user.name, user.email, user.cart, user._id);
       next();
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 });
 
 app.use('/admin', adminRoutes);
@@ -36,9 +36,9 @@ mongoose
   .connect(
     'mongodb+srv://maximilian:9u4biljMQc4jjqbe@cluster0-ntrwp.mongodb.net/test?retryWrites=true'
   )
-  .then(result => {
+  .then((result) => {
     app.listen(3000);
   })
-  .catch(err => {
-    console.log(err);
+  .catch((err) => {
+    console.error(err);
   });
