@@ -3,9 +3,10 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const User = require('./models/user');
 
 const errorController = require('./controllers/error');
+const User = require('./models/user');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -33,27 +34,23 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    'mongodb+srv://Shreyas:JfuB7VLhsMJIlNnv@node-course.q3zz2.mongodb.net/shop?retryWrites=true&w=majority'
+    'mongodb+srv://Shreyas:3Dq5vNpdBSzPHXY3@node-course.q3zz2.mongodb.net/shop?retryWrites=true&w=majority'
   )
   .then((result) => {
-    User.findOne()
-      .then((user) => {
-        if (!user) {
-          const user = new User({
-            name: 'Shreyas Kharbanda',
-            email: 'skkhary@gmail.com',
-            cart: {
-              items: [],
-            },
-          });
-          user.save();
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    User.findOne().then((user) => {
+      if (!user) {
+        const user = new User({
+          name: 'Max',
+          email: 'max@test.com',
+          cart: {
+            items: [],
+          },
+        });
+        user.save();
+      }
+    });
     app.listen(3000);
   })
   .catch((err) => {
-    console.error(err);
+    console.log(err);
   });
